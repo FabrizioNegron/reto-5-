@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #1a31b5;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+#projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+/* Estilos para la sección Sobre Mí */
+#about {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilos para el texto */
+#about p {
+    flex: 1;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Estilos para la imagen */
+#about img {
+    width: 200px;
+    height: 270PX;
+    border-radius: 10%; /* Da forma circular a la imagen */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #about img {
+        width: 150px;
+    }
+}
+
+/* Estilos para la sección de Proyectos */
+#projects {
+    padding: 20px;
+    width: 100%;
+    background-color: #f4f4f9;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Configuración de la cuadrícula de proyectos */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+/* Estilos para cada tarjeta de proyecto */
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+    }
+}
+
+</style>
+<body>
+    <header>
+        <h1>FABRIZIO NEGRON</h1>
+        <nav>
+            <a href="#about">Sobre Mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Sobre Mí</h2>
+        <div class="about-content">
+            <p>Soy Fabrizio German Negrón Quispe, un estudiante de Análisis de Sistemas en Valle Grande. Con 17 años y originario de San Luis Cañete, me encuentro en el segundo semestre de mi carrera, donde estoy desarrollando una sólida base en tecnología y resolución de problemas. Me apasiona aprender sobre nuevas herramientas y metodologías que impulsen el desarrollo de sistemas eficientes y creativos. Mi objetivo es aplicar mis conocimientos en proyectos que generen impacto y sigan potenciando mi crecimiento profesional.</p>
+            <img src="IMAGEN/fabrizionegron.jpeg" alt="Imagen de perfil">
+        </div>
+    </section>
+    
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="project-grid">
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <img src="IMAGEN/AUTOMATIZACION.png" alt="Proyecto 1">
+                <h3>Proyecto de Automatizacion | I semestre</h3>
+                <p>En mi primer semestre, junto a mis compañeros Briseyda y Alejandro, llevamos a cabo un proyecto de automatización en Valle Grande para simplificar el proceso de emisión de constancias de matrícula. Identificamos ineficiencias en el sistema manual, lo cual generaba demoras y errores en la gestión de estos documentos. </p>
+            </div>
+            
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <img src="IMAGEN/ECOTAINER.png" alt="Proyecto 2">
+                <h3>Proyecto Codigo por un mundo mejor | II semestre</h3>
+                <p>
+                    En colaboración con mis compañeros Víctor y Ángel, desarrollamos una página web enfocada en el Objetivo de Desarrollo Sostenible (ODS) 12, que promueve el consumo y la producción responsables. Este proyecto buscaba informar y sensibilizar a los usuarios sobre prácticas sostenibles, ofreciendo recursos y consejos para reducir el impacto ambiental. La experiencia nos permitió profundizar en el desarrollo web y en la importancia de la sostenibilidad, integrando elementos visuales y funcionalidades interactivas para crear un recurso educativo accesible y atractivo.</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML / CSS / JavaScript</li>
+        </ul>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Contáctame a través de mi correo: <a href="fabrizio.negron.quispe@vallegrande.edu.pe">fabrizio.negron.quispe@vallegrande.edu.pe  </a></p>
+        <div class="social-links">
+            <a href="https://github.com/FabrizioNegron" target="_blank">GitHub</a>
+            <a href="https://www.facebook.com/fabrizionq?mibextid=ZbWKwL" target="_blank">facebook</a>
+            <a href="https://www.instagram.com/fabhz_nq/profilecard/?igsh=MXkwaW85N29pOWR6bg==" target="_blank">instagram</a>
+        </div>
+    </section>
+</html>
